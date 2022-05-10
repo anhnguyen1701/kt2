@@ -7,6 +7,7 @@
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/drawable/ic_history.xml" value="0.149" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/drawable/ic_search.xml" value="0.149" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/drawable/ic_today.xml" value="0.149" />
+        <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/drawable/tabbar_indicator.xml" value="0.1865" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/activity_add.xml" value="0.25" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/activity_update_delete.xml" value="0.36666666666666664" />
@@ -16,6 +17,7 @@
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/frament_search.xml" value="0.33" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/item.xml" value="0.5" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/item_spinner.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/layout/tablayout.xml" value="0.1" />
         <entry key="..\:/Users/anh nguyen/AndroidStudioProjects/kt2/app/src/main/res/menu/navigation.xml" value="0.36666666666666664" />
       </map>
     </option>
