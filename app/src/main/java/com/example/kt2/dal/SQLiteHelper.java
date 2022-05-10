@@ -75,7 +75,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         String[] whereArgs = {date};
         SQLiteDatabase st = getReadableDatabase();
         Cursor rs = st.query("items", null, whereClause, whereArgs, null, null, null);
-        while(rs!=null &&rs.moveToNext()) {
+        while (rs != null && rs.moveToNext()) {
             int id = rs.getInt(0);
             String title = rs.getString(1);
             String category = rs.getString(2);
@@ -84,5 +84,29 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
         }
         return list;
+    }
+
+    //update
+    public int update(Item i) {
+        ContentValues values = new ContentValues();
+        values.put("title", i.getTitle());
+        values.put("category", i.getCategory());
+        values.put("price", i.getPrice());
+        values.put("date", i.getDate());
+
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        String whereClause = "id=?";
+        String[] whereArgs = {Integer.toString(i.getId())};
+
+        return sqLiteDatabase.update("items", values, whereClause, whereArgs);
+    }
+
+
+    //delete
+    public int delete(int id) {
+        String whereClause = "id=?";
+        String[] whereArgs = {Integer.toString(id)};
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        return sqLiteDatabase.delete("items", whereClause, whereArgs);
     }
 }
