@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private FloatingActionButton fab;
 
-    private TabLayout tabLayout;
-
+//    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tablayout);
+        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.tablayout);
 
         navigationView = findViewById(R.id.bottom_nav);
         viewPager = findViewById(R.id.viewPager);
@@ -44,56 +44,56 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
 
-//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                switch (position) {
-//                    case 0:
-//                        navigationView.getMenu().findItem(R.id.mHome).setChecked(true);
-//                        break;
-//                    case 1:
-//                        navigationView.getMenu().findItem(R.id.mHistory).setChecked(true);
-//                        break;
-//                    case 2:
-//                        navigationView.getMenu().findItem(R.id.mSearch).setChecked(true);
-//                        break;
-//                }
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//            }
-//        });
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-//        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.mHome:
-//                        viewPager.setCurrentItem(0);
-//                        break;
-//
-//                    case R.id.mHistory:
-//                        viewPager.setCurrentItem(1);
-//                        break;
-//
-//                    case R.id.mSearch:
-//                        viewPager.setCurrentItem(2);
-//                        break;
-//                }
-//                return true;
-//            }
-//        });
+            }
 
-        tabLayout = findViewById(R.id.tab);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setText("HOM NAY");
-        tabLayout.getTabAt(1).setText("LICH SU");
-        tabLayout.getTabAt(2).setText("TIM KIEM");
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        navigationView.getMenu().findItem(R.id.mHome).setChecked(true);
+                        break;
+                    case 1:
+                        navigationView.getMenu().findItem(R.id.mHistory).setChecked(true);
+                        break;
+                    case 2:
+                        navigationView.getMenu().findItem(R.id.mSearch).setChecked(true);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.mHome:
+                        viewPager.setCurrentItem(0);
+                        break;
+
+                    case R.id.mHistory:
+                        viewPager.setCurrentItem(1);
+                        break;
+
+                    case R.id.mSearch:
+                        viewPager.setCurrentItem(2);
+                        break;
+                }
+                return true;
+            }
+        });
+
+//        tabLayout = findViewById(R.id.tab);
+//        tabLayout.setupWithViewPager(viewPager);
+//        tabLayout.getTabAt(0).setText("HOM NAY");
+//        tabLayout.getTabAt(1).setText("LICH SU");
+//        tabLayout.getTabAt(2).setText("TIM KIEM");
     }
 }
