@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "test", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -67,13 +69,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.mHome: viewPager.setCurrentItem(0);
+                    case R.id.mHome:
+                        viewPager.setCurrentItem(0);
                         break;
 
-                    case R.id.mHistory: viewPager.setCurrentItem(1);
+                    case R.id.mHistory:
+                        viewPager.setCurrentItem(1);
                         break;
 
-                    case R.id.mSearch: viewPager.setCurrentItem(2);
+                    case R.id.mSearch:
+                        viewPager.setCurrentItem(2);
                         break;
                 }
                 return true;
