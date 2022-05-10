@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:iconifiedByDefault="false"
-        app:queryHint="nhap mon chi tieu"></androidx.appcompat.widget.SearchView>
+        app:queryHint="nhap mon chi tieu"></SearchView>
 
     <EditText
         android:id="@+id/eFrom"
@@ -45,23 +45,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Search"
-            ></Button>
+            android:text="Search"></Button>
     </LinearLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/tvTong"
-        android:textColor="@color/yello"
-        android:text="Tong"
-        android:layout_marginLeft="20dp"
-        android:textSize="15dp"
-        ></TextView>
-    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Tong"
+        android:textColor="@color/yello"
+        android:textSize="15dp"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
-        android:layout_marginTop="10dp"
-        ></androidx.recyclerview.widget.RecyclerView>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>
